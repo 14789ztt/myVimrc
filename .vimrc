@@ -57,6 +57,7 @@ endif
 
 " my configure innoremap{{{
 inoremap jk <ESC>
+"complete the code
 inoremap jj <c-p>
 inoremap /*  /* */<esc>hhi<space>
 inoremap (  ()<esc>i
@@ -145,6 +146,10 @@ set whichwrap=b,s,h,l
 "nnoremap {{{
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+"compile and run the current file
+nnoremap <leader>r  :!g++ % && ./a.out<cr>
+
 nnoremap H ^
 nnoremap L g_
 "zN<cr> can decide the height of the window
@@ -185,10 +190,14 @@ nnoremap zl L
 onoremap in( :<c-u>normal! f(vi)<cr>
 onoremap in{ :<c-u>normal! f{vi}<cr>
 onoremap in[ :<c-u>normal! f[vi]<cr>
+onoremap in< :<c-u>normal! f<vi><cr>
+onoremap in" :<c-u>normal! f"vi"<cr>
 
 onoremap il( :<c-u>normal! F)vi(<cr>
 onoremap il{ :<c-u>normal! F}vi{<cr>
 onoremap il[ :<c-u>normal! F]vi[<cr>
+onoremap il< :<c-u>normal! F>vi<<cr>
+onoremap il" :<c-u>normal! F"vi"<cr>
 
 
 "vnoremap {{{
