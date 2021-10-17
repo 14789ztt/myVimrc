@@ -90,6 +90,7 @@ let maplocalleader = "\\"
 
 "set configure{{{
 "set guifont=Consolas:h18
+"set encoding=utf-8
 set number
 set relativenumber
 set autoindent
