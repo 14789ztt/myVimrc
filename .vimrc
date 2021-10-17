@@ -148,7 +148,7 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "compile and run the current file
-nnoremap <leader>r  :!g++ % && ./a.out<cr>
+nnoremap <leader>r  :!g++ -g % && ./a.out<cr>
 
 nnoremap H ^
 nnoremap L g_
@@ -208,6 +208,9 @@ vnoremap [ s[]<esc>hp
 vnoremap { s{}<esc>hp
 vnoremap " s""<esc>hp
 vnoremap < s<><esc>hp
+
+"注释
+vnoremap / s/**/<esc>hhp    
 "}}}
 
 
