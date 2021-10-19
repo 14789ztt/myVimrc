@@ -170,13 +170,13 @@ nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 "将所选的单词用"包围
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 "将所选的单词用'包围
-nnoremap <leader>n :NERDTree<cr>
+"nnoremap <leader>n :NERDTree<cr>
 "打开目录树"
 
-nnoremap <leader>w :w<cr>
+"nnoremap <leader>w :w<cr>
 "save file; you can also use ZZ
 
-nnoremap <leader>q :wq<cr>
+"nnoremap <leader>q :wq<cr>
 "save file and quit
 "
 
