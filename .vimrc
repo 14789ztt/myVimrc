@@ -14,11 +14,11 @@ runtime! debian.vim
 
 "vim-plug yyds
 filetype plugin on
-call plug#begin('~/.vim/plugged')
-    Plug 'preservim/nerdtree' "添加目录树
+"call plug#begin('~/.vim/plugged')
+    "Plug 'preservim/nerdtree' "添加目录树
 "Plug 'iamcco/mathjax-support-for-mkdp'
 "Plug 'iamcco/markdown-preview.nvim',{ 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-call plug#end()
+"call plug#end()
 
 "Vundle{{{
 "在此设置运行时路径
@@ -130,7 +130,7 @@ set cursorline      "
 "set cursorcolumn
 set foldmethod=marker
 set backspace=2 "解决backspace失效的问题
-set completepopup=height:6,width:60 "设置补全窗口的大小
+"set completepopup=height:6,width:60 "设置补全窗口的大小
 set autoread    "when file changed,read it again.
 
 
@@ -269,7 +269,7 @@ augroup end
 "    exec "!"
 "
 
-func SkipPair()  
+func MySkipPair()  
     if getline('.')[col('.') - 1] == ')' || getline('.')[col('.') - 1] == ']' || getline('.')[col('.') - 1] == '"' || getline('.')[col('.') - 1] == "'" || getline('.')[col('.') - 1] == '}'  
         return "\<ESC>la"  
     else  
@@ -277,7 +277,7 @@ func SkipPair()
     endif  
 endfunc 
 " 将tab键绑定为跳出括号
-inoremap <TAB> <c-r>=SkipPair()<CR>
+inoremap <TAB> <c-r>=MySkipPair()<CR>
 "
 ""设置= + - * 前后自动空格
 ""设置，后面自动添加空格
