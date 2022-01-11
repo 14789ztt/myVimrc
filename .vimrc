@@ -269,7 +269,7 @@ augroup end
 "    exec "!"
 "
 
-func MySkipPair()  
+function! MySkipPair()  
     if getline('.')[col('.') - 1] == ')' || getline('.')[col('.') - 1] == ']' || getline('.')[col('.') - 1] == '"' || getline('.')[col('.') - 1] == "'" || getline('.')[col('.') - 1] == '}'  
         return "\<ESC>la"  
     else  
